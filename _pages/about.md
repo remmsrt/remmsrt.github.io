@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Research Intern in Machine Learning.
+#subtitle: Research Intern in Machine Learning.
 
 profile:
   align: right
@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am currently a Research Intern at Okinawa Institute of Science and Technology (OIST), Japan, under the supervision of Prof. Makoto Yamada.
+Hello! I am currently a Research Intern at Okinawa Institute of Science and Technology (OIST), Japan, supervised by Prof. Makoto Yamada.
 
-I completed a Master’s degree in Quantitative Finance ([M2MO](https://masterfinance.math.univ-paris-diderot.fr)) at ENSAE Paris and Université Paris Cité, where I also conducted my M2 internship at Capital Fund Management ([CFM](https://www.cfm.com)).
+I recently graduated with a Master’s degree in Quantitative Finance ([M2MO](https://masterfinance.math.univ-paris-diderot.fr)) from ENSAE Paris and Université Paris Cité, where I also conducted a research internship at Capital Fund Management ([CFM](https://www.cfm.com)). Prior to that, I obtained a Master’s degree in Applied Mathematics and Data Science from Université Paris Cité, and a Bachelor's degree in applied mathematics and computer science from Université Gustave Eiffel.
 
-My research interests lie at the intersection of quantitative finance and artificial intelligence.
+My research interests lie at the intersection of quantitative finance and artificial intelligence, with a particular focus on generative models and their applications to financial modeling.
