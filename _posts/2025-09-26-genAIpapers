@@ -1,0 +1,15 @@
+---
+layout: post
+title: "References in Generative Modeling"
+description: "Papers, blog posts, notes, talks about genAI."
+---
+
+This is a non-exhaustive list of papers, blog posts, notes, and talks I found interesting in generative AI for continuous spaces.
+
+## Diffusion models
+
+- ✍️ [Yang Song — Blog about score-based generative models](https://yang-song.net/blog/2021/score/)
+
+## Flow models
+
+- 📝 [Simon Coste — Notes about Flow-based generative models](https://scoste.fr/notes/)
