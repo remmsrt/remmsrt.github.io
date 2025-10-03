@@ -23,3 +23,47 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/* === ABOUT: photo à gauche, texte en colonne à droite === */
+/* On cible un wrapper qu'on va ajouter autour du contenu: .about-page */
+.about-page .profile {
+  float: left;          /* transforme la photo en vraie colonne gauche */
+  width: 260px;         /* largeur colonne photo (ajuste si besoin) */
+  margin-right: 28px;   /* espace entre photo et texte */
+  margin-bottom: 0;
+}
+
+.about-page .profile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Empêche le texte de passer sous la photo → crée une colonne texte */
+.about-page .main-content-wrapper {
+  overflow: hidden;
+}
+
+/* Responsive: pile sur mobile */
+@media (max-width: 576px) {
+  .about-page .profile {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .about-page .main-content-wrapper {
+    overflow: visible;
+  }
+}
+
+/* === ABOUT: liens en bleu (même visités) === */
+.about-page a,
+.about-page a:visited {
+  color: #0d6efd !important;   /* bleu style Bootstrap */
+  text-decoration: none;
+}
+.about-page a:hover {
+  color: #0a58ca !important;
+  text-decoration: underline;
+}
