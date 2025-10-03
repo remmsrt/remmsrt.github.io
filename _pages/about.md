@@ -5,9 +5,9 @@ permalink: /
 #subtitle: Research Intern in Machine Learning.
 
 profile:
-  align: right
+  align: left
   image: photo_linkedin.jpeg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
 #  more_info: >
 #    <p>555 your office number</p>
 #    <p>123 your address street</p>
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hello! I am currently a Research Intern at Okinawa Institute of Science and Technology (OIST), Japan, supervised by Prof. Makoto Yamada.
+I am currently a PhD student at [CERMICS](https://cermics-lab.enpc.fr) and [BNP Paribas CIB](https://cib.bnpparibas), under the supervision of [Julien Guyon](https://cermics.enpc.fr/~guyon//), [Grégoire Loeper](https://www.linkedin.com/in/gregoire-loeper-7252bb6/) and [Loucas Pillaud-Vivien](https://thebiglouloup.github.io/loucaspillaudvivien/). Before starting my PhD, I completed a research internship at [OIST](https://www.google.com/search?client=safari&rls=en&q=oist&ie=UTF-8&oe=UTF-8), Okinawa, Japan, supervised by Prof. Makoto Yamada.
 
 I recently graduated with a Master’s degree in Quantitative Finance ([M2MO](https://masterfinance.math.univ-paris-diderot.fr)) from ENSAE Paris and Université Paris Cité, where I also conducted a research internship at Capital Fund Management ([CFM](https://www.cfm.com)). Prior to that, I obtained a Master’s degree in Applied Mathematics and Data Science from Université Paris Cité, and a Bachelor's degree in applied mathematics and computer science from Université Gustave Eiffel.
 
