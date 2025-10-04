@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Updated on June 5, 2025.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "nav-talks",
           title: "Talks",
           description: "",
@@ -35,11 +28,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-beginning-of-my-master-s-end-of-studies-internship-at-capital-fund-management-cfm",
-          title: 'Beginning of my Master’s end-of-studies internship at Capital Fund Management (CFM).',
+            },},{id: "news-beginning-of-my-research-internship-at-capital-fund-management-cfm",
+          title: 'Beginning of my research internship at Capital Fund Management (CFM).',
           description: "",
-          section: "News",},{id: "news-beginning-of-my-research-internship-at-oist-okinawa-japan",
-          title: 'Beginning of my research internship at OIST, Okinawa, Japan.',
+          section: "News",},{id: "news-beginning-of-my-end-of-studies-research-internship-at-oist-okinawa-japan",
+          title: 'Beginning of my end-of-studies research internship at OIST, Okinawa, Japan.',
           description: "",
           section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib",
           title: 'Start of my PhD at CERMICS and BNP Paribas CIB.',
