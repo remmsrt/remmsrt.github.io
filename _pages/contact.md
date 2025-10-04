@@ -2,6 +2,11 @@
 title: Contact
 nav: true
 permalink: /contact/
-redirect_to: "mailto:remisurat@outlook.com"
-nav_order: 3
+nav_order: 4
 ---
+
+<meta http-equiv="refresh" content="0; url=mailto:remisurat@outlook.com">
+<script>window.location.href = "mailto:remisurat@outlook.com";</script>
+
+If your email client doesn’t open automatically, you can email me at  
+[remisurat@outlook.com](mailto:remisurat@outlook.com).
