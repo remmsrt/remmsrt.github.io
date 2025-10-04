@@ -28,11 +28,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-beginning-of-my-research-internship-at-capital-fund-management-cfm",
-          title: 'Beginning of my research internship at Capital Fund Management (CFM).',
+            },},{id: "news-start-of-my-end-of-studies-research-internship-at-capital-fund-management-cfm-within-the-statistical-arbitrage-team-supervised-by-prof-vipin-kerala-varma-dario-villamaina-and-alexios-beveratos-focused-on-the-dynamics-of-implied-volatility-surfaces-around-major-market-events",
+          title: 'Start of my end-of-studies research internship at Capital Fund Management (CFM), within the...',
           description: "",
-          section: "News",},{id: "news-beginning-of-my-end-of-studies-research-internship-at-oist-okinawa-japan",
-          title: 'Beginning of my end-of-studies research internship at OIST, Okinawa, Japan.',
+          section: "News",},{id: "news-start-of-my-research-internship-at-oist-okinawa-japan-supervised-by-prof-makoto-yamada-worked-on-flow-based-generative-models-and-diffusion-models",
+          title: 'Start of my research internship at OIST, Okinawa, Japan. Supervised by Prof. Makoto...',
           description: "",
           section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib",
           title: 'Start of my PhD at CERMICS and BNP Paribas CIB.',
