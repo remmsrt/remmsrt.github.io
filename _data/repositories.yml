@@ -1,7 +1,7 @@
 github_users:
   - remmsrt
 
-repo_description_lines_max: 2
+repo_description_lines_max: 30
 
 github_repos:
   - remmsrt/DiffusionSDE

@@ -2,7 +2,7 @@
 title: Contact
 nav: true
 permalink: /contact/
-nav_order: 4
+nav_order: 5
 ---
 
 <meta http-equiv="refresh" content="0; url=mailto:remisurat@outlook.com">
