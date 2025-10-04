@@ -40,8 +40,10 @@ table.table a {
   color: var(--global-theme-color);
 
   &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
+    color: var(--global-hover-color);
+    text-decoration: none;
+    background-color: rgba(0, 102, 204, 0.12); /* surlignage bleu léger */
+    border-radius: 3px;
   }
 
   &:hover:after :not(.nav-item.dropdown) {

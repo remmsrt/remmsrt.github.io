@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Start of my end-of-studies research internship at [Capital Fund Management (CFM)](https://www.cfm.com), within the Statistical Arbitrage team. Supervised by Prof. Vipin Kerala Varma, Dario Villamaina, and Alexios Beveratos. Focused on the dynamics of implied volatility surfaces around major market events.
+Start of my research internship at [CFM](https://www.cfm.com), within the Statistical Arbitrage team. Supervised by Vipin Kerala Varma, Dario Villamaina, and Alexios Beveratos. Focused on the study implied volatility surfaces around major market events.
