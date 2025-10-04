@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Some recent projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
         },{id: "nav-talks",
           title: "Talks",
           description: "",
@@ -42,7 +49,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-start-of-my-research-internship-at-cfm-within-the-statistical-arbitrage-team-supervised-by-vipin-kerala-varma-dario-villamaina-and-alexios-beveratos-focused-on-the-study-implied-volatility-surfaces-around-major-market-events",
+            },},{id: "news-start-of-my-research-internship-at-cfm-within-the-statistical-arbitrage-team-supervised-by-vipin-kerala-varma-dario-villamaina-and-alexios-beveratos-worked-on-the-study-implied-volatility-surfaces-around-major-market-events",
           title: 'Start of my research internship at CFM, within the Statistical Arbitrage team. Supervised...',
           description: "",
           section: "News",},{id: "news-start-of-my-research-internship-at-oist-okinawa-japan-within-the-mlds-team-supervised-by-prof-makoto-yamada-and-prof-kenji-fukumizu-worked-on-flow-based-generative-models-and-diffusion-models",
