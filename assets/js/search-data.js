@@ -4,7 +4,7 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -17,7 +17,7 @@ ninja.data = [{
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "Updated on June 5, 2025.",
           section: "Navigation",
           handler: () => {
@@ -35,16 +35,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-beginning-of-my-master-s-end-of-studies-internship-at-capital-fund-management-cfm",
+          title: 'Beginning of my Master’s end-of-studies internship at Capital Fund Management (CFM).',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-beginning-of-my-research-internship-at-oist-okinawa-japan",
+          title: 'Beginning of my research internship at OIST, Okinawa, Japan.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib",
+          title: 'Start of my PhD at CERMICS and BNP Paribas CIB.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
