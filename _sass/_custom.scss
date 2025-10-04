@@ -1,0 +1,14 @@
+/* Custom styles to override default al-folio theme */
+
+/* couleur des liens */
+a {
+    color: #0066cc;   /* bleu normal */
+  }
+  
+  a:hover, a:focus {
+    color: #004a99;   /* bleu foncé au survol */
+  }
+  
+  a:visited {
+    color: #0066cc;   /* on garde la même couleur pour éviter le violet */
+  }
