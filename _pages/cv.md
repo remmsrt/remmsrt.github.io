@@ -1,11 +1,3 @@
 ---
-layout: cv
-permalink: /cv/
-title: CV
-nav: true
-nav_order: 5
-cv_pdf: CV_SURAT_REMI_CIFRE.pdf # you can also use external links here
-description: Updated on June 5, 2025.
-#toc:
-#  sidebar: left
+redirect_to: /assets/pdfs/CV_SURAT_REMI_CIFRE.pdf
 ---
