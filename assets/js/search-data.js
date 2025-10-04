@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-",
+  },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/_pages/cv/";
+          },
+        },{id: "nav-",
           title: "",
           description: "",
           section: "Navigation",
@@ -28,14 +35,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-start-of-my-end-of-studies-research-internship-at-capital-fund-management-cfm-within-the-statistical-arbitrage-team-supervised-by-prof-vipin-kerala-varma-dario-villamaina-and-alexios-beveratos-focused-on-the-dynamics-of-implied-volatility-surfaces-around-major-market-events",
-          title: 'Start of my end-of-studies research internship at Capital Fund Management (CFM), within the...',
+            },},{id: "news-start-of-my-research-internship-at-cfm-within-the-statistical-arbitrage-team-supervised-by-vipin-kerala-varma-dario-villamaina-and-alexios-beveratos-focused-on-the-study-implied-volatility-surfaces-around-major-market-events",
+          title: 'Start of my research internship at CFM, within the Statistical Arbitrage team. Supervised...',
           description: "",
-          section: "News",},{id: "news-start-of-my-research-internship-at-oist-okinawa-japan-supervised-by-prof-makoto-yamada-worked-on-flow-based-generative-models-and-diffusion-models",
-          title: 'Start of my research internship at OIST, Okinawa, Japan. Supervised by Prof. Makoto...',
+          section: "News",},{id: "news-start-of-my-research-internship-at-oist-okinawa-japan-within-the-mlds-team-supervised-by-prof-makoto-yamada-and-prof-kenji-fukumizu-worked-on-flow-based-generative-models-and-diffusion-models",
+          title: 'Start of my research internship at OIST, Okinawa, Japan, within the MLDS team....',
           description: "",
-          section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib",
-          title: 'Start of my PhD at CERMICS and BNP Paribas CIB.',
+          section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib-within-the-quantitative-research-team-work-on-the-study-of-generative-models-of-financial-time-series",
+          title: 'Start of my PhD at CERMICS and BNP Paribas CIB, within the quantitative...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
