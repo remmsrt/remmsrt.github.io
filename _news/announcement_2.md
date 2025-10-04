@@ -1,8 +1,8 @@
 ---
 layout: post
-date: Apr 2025
+date: 2025-04-03
 inline: true
 related_posts: false
 ---
 
-Beginning of my end-of-studies research internship at [OIST](https://www.oist.jp), Okinawa, Japan.
+Start of my research internship at [OIST](https://www.oist.jp), Okinawa, Japan. Supervised by Prof. Makoto Yamada. Worked on flow-based generative models and diffusion models.
