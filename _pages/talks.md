@@ -9,6 +9,9 @@ nav_order: 4
 
 ## 2025
 
+<div style="clear: both;"></div>
+<hr class="about-sep">
+
 ### [Flow-based generative models](https://groups.oist.jp/mlds/event/seminar-mlds-unit-seminar-2025-4-mr-r%C3%A9mi-surat-ensae-paris-ms-klea-ziu-mbzuai)  
 *How to train them efficiently using flow matching and optimal transport*
 
