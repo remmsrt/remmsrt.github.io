@@ -1,8 +1,8 @@
 ---
 layout: page
-title: GenAI
+title: GenAI for continuous spaces
 permalink: /genAI/
-description: A timeline of key papers and resources on GenAI for continuous spaces.
+description: A non-exhaustive list of key papers and resources on GenAI for continuous spaces.
 nav: true
 nav_order: 3
 ---

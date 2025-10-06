@@ -16,8 +16,7 @@ nav_order: 4
 *How to train them efficiently using flow matching and optimal transport*
 
 <div style="margin-top: -0.3em; font-size: 0.9rem; color: var(--global-text-color-light); line-height: 1.3;">
-  MLDS Unit Seminar, OIST, Okinawa, Japan<br>
-  <span style="color: var(--global-text-color);">September 16, 2025</span>
+<span style="color: var(--global-text-color);">OIST, Okinawa, Japan — September 16, 2025</span>
 </div>
 
 <div style="margin-top: 1.2em;"></div>
