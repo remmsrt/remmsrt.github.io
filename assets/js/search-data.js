@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-genai",
           title: "GenAI",
-          description: "A selection of nice papers, blog posts and others about generative AI for continuous spaces.",
+          description: "A selection of nice papers, blog posts and others about GenAI for continuous spaces.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/genAI/";
