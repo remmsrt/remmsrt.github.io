@@ -11,21 +11,21 @@ ninja.data = [{
     },
   },{id: "nav-repositories",
           title: "Repositories",
-          description: "",
+          description: "A selection of my GitHub repositories.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Some recent projects.",
+          description: "A selection of my personal and research projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-talks",
           title: "Talks",
-          description: "",
+          description: "Recent presentations and seminars.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/talks/";
@@ -58,19 +58,19 @@ ninja.data = [{
           section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib-within-the-quantitative-research-team-work-on-the-study-of-generative-models-of-financial-time-series",
           title: 'Start of my PhD at CERMICS and BNP Paribas CIB, within the quantitative...',
           description: "",
-          section: "News",},{id: "projects-project-10",
-          title: 'project 10',
+          section: "News",},{id: "projects-blank-project",
+          title: 'Blank Project',
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
             },},{id: "projects-score-based-diffusion-model-with-sdes",
           title: 'Score-Based Diffusion Model with SDEs',
-          description: "with background image",
+          description: "And application to image generation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "another with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},];
