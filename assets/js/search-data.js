@@ -72,7 +72,7 @@ ninja.data = [{
               window.location.href = "/projects/10_project/";
             },},{id: "projects-score-based-diffusion-model-with-sdes",
           title: 'Score-Based Diffusion Model with SDEs',
-          description: "And application to image generation",
+          description: "Application to image generation (MNIST)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},];
