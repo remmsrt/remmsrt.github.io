@@ -5,6 +5,7 @@ description: another with background image
 img: assets/img/12.jpg
 importance: 3
 category: personal
+published: false
 ---
 
 Every project has a beautiful feature showcase page.

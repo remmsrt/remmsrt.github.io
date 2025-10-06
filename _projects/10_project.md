@@ -4,7 +4,7 @@ title: Blank Project
 description: with background image
 img: assets/img/12.jpg
 importance: 2
-category: research
+category: academic
 related_publications: true
 ---
 

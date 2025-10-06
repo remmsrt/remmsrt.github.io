@@ -4,7 +4,7 @@ title: Score-Based Diffusion Model with SDEs
 img: assets/img/forward.gif
 description: And application to image generation
 importance: 1
-category: research
+category: personal
 related_publications: true
 ---
 
