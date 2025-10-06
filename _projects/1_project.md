@@ -2,7 +2,7 @@
 layout: page
 title: Score-Based Diffusion Model with SDEs
 img: assets/img/forward.gif
-description: And application to image generation
+description: Application to image generation (MNIST)
 importance: 1
 category: personal
 related_publications: true
