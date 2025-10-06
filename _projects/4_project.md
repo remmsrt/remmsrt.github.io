@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Blank Project
+description: another with background image
+img: assets/img/12.jpg
 importance: 3
 category: personal
 ---

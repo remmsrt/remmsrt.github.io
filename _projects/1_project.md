@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Score-Based Diffusion Model with SDEs
-description: with background image
-img: assets/img/12.jpg
+img: assets/img/forward.gif
+description: And application to image generation
 importance: 1
 category: research
 related_publications: true
@@ -55,7 +55,7 @@ Another way to represent a probability distribution is by **implicit generative 
 ---
 
 <figure style="text-align: center;">
-  <img src="assets/img/GM_overview.png" width="70%" />
+  <img src="{{ '/assets/img/GM_overview.png' | relative_url }}" width="70%" />
   <figcaption style="margin-top: 10px; font-size: 90%; text-align: left; display: inline-block;">
     <b>Overview of common deep generative models.</b><br><br>
     <table style="font-size: 90%; border-spacing: 0;">
@@ -121,8 +121,8 @@ Let’s assume our true data distribution is a simple univariate **Gaussian Mixt
 ---
 
 <div align="center">
-  <img src="assets/img/pdf_gmm.png" width="40%" style="display:inline-block; margin-right:10px;">
-  <img src="assets/img/score_gmm.png" width="40%" style="display:inline-block;">
+  <img src="{{ '/assets/img/pdf_gmm.png' | relative_url }}" width="40%" style="display:inline-block; margin-right:10px;">
+  <img src="{{ '/assets/img/score_gmm.png' | relative_url }}" width="40%" style="display:inline-block;">
 </div>
 
 ---
@@ -186,7 +186,7 @@ The gradient term $\Delta t \nabla_{\mathbf{x}} \log p(\mathbf{x}_i)$ moves samp
 
 <div align="center">
 
-<img src="assets/img/langevin.gif"/>
+<img src="{{ '/assets/img/langevin.gif' | relative_url }}"/>
 
 </div>
 
@@ -262,7 +262,7 @@ Since the $\ell_2$ differences between the true data score function and score-ba
 
 <div align="center">
 
-<img src="assets/img/noise.png" width="70%"/>
+<img src="{{ '/assets/img/noise.png' | relative_url }}" width="70%"/>
 
 </div>
 
@@ -403,11 +403,13 @@ We will refer the corrupted data distribution as $q_\sigma(\tilde{\mathbf{x}})$.
 
 ---
 
+
 <div align="center">
 
-<img src="assets/img/denoising_score.gif"/>
+<img src="{{ '/assets/img/denoising_score.gif' | relative_url }}"/>
 
 </div>
+
 
 ---
 
@@ -534,9 +536,10 @@ The following figure visualizes that for the $1D$ case. We can see that the dire
 
 ---
 
+
 <div align="center">
 
-<img src="assets/img/pdf_score.gif"/>
+<img src="{{ '/assets/img/pdf_score.gif' | relative_url }}"/>
 
 </div>
 
@@ -569,7 +572,7 @@ $$
 
 <div align="center">
 
-<img src="assets/img/noise.gif" width="70%"/>
+<img src="{{ '/assets/img/noise.gif' | relative_url }}" width="70%"/>
 
 </div>
 
@@ -656,7 +659,7 @@ We can extend this idea by extending the number of perturbations to infinity.
 
 <div align="center">
 
-<img src="assets/img/forward.gif"/>
+<img src="{{ '/assets/img/forward.gif' | relative_url }}" width="70%"/>
 
 </div>
 
@@ -699,7 +702,7 @@ Here, $dt$ represents a **negative infinitesimal time step**, since the SDE need
 
 <div align="center">
 
-<img src="assets/img/sde_schematic.jpg" width="50%"/>
+<img src="{{ '/assets/img/sde_schematic.jpg' | relative_url }}" width="70%"/>
 
 </div>
 
@@ -760,7 +763,7 @@ Typically, we can use the architecture design of [U-Net (2015)](https://arxiv.or
 
 <div align="center">
 
-<img src="assets/img/U-net.png"/>
+<img src="{{ '/assets/img/U-net.png' | relative_url }}" width="70%"/>
 
 </div>
 
@@ -776,7 +779,7 @@ For example, let's say we have a picture and we want to predict RGB color values
 
 <div align="center">
 
-<img src="assets/img/GFF.gif"/>
+<img src="{{ '/assets/img/GFF.gif' | relative_url }}" width="70%"/>
 
 </div>
 

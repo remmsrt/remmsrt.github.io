@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 10
+title: Blank Project
 description: with background image
 img: assets/img/12.jpg
-importance: 1
+importance: 2
 category: research
 related_publications: true
 ---
