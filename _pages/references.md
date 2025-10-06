@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GenAI for continuous spaces
+title: GenAI
 permalink: /genAI/
 description: A non-exhaustive list of key papers and resources on GenAI for continuous spaces.
 nav: true
@@ -14,15 +14,15 @@ nav_order: 3
     <div class="tl-content">
       <div class="tl-item"><strong><a href="https://arxiv.org/abs/2209.15571" target="_blank" rel="noopener">Building Normalizing Flows with Stochastic Interpolants</a></strong></div>
       <div class="tl-item"><strong><a href="https://arxiv.org/abs/2209.03003" target="_blank" rel="noopener">Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow</a></strong></div>
-      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2210.02747" target="_blank" rel="noopener">Flow Matching for Generative Modeling</a></strong> — allowing to train CNFs at unprecedented scale.</div>
+      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2210.02747" target="_blank" rel="noopener">Flow Matching for Generative Modeling</a></strong></div>
     </div>
   </div>
 
   <div class="tl-row">
     <div class="tl-year">2021</div>
     <div class="tl-content">
-      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2011.13456" target="_blank" rel="noopener">Score-Based Generative Modeling through Stochastic Differential Equations</a></strong> — unifies DDPMs and score-based models with SDEs.</div>
-      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2010.02502" target="_blank" rel="noopener">Denoising Diffusion Implicit Models</a></strong> — faster sampling than DDPM.</div>
+      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2011.13456" target="_blank" rel="noopener">Score-Based Generative Modeling through Stochastic Differential Equations</a></strong></div>
+      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2010.02502" target="_blank" rel="noopener">Denoising Diffusion Implicit Models</a></strong></div>
     </div>
   </div>
 
@@ -30,7 +30,7 @@ nav_order: 3
     <div class="tl-year">2020</div>
     <div class="tl-content">
       <div class="tl-item"><strong><a href="https://arxiv.org/abs/2006.09011" target="_blank" rel="noopener">Improved Techniques for Training Score-Based Generative Models</a></strong></div>
-      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener">Denoising Diffusion Probabilistic Models</a></strong> — basis of modern diffusion models.</div>
+      <div class="tl-item"><strong><a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener">Denoising Diffusion Probabilistic Models</a></strong></div>
     </div>
   </div>
 
@@ -105,8 +105,10 @@ nav_order: 3
 
 ## Blog posts
 
-- **2021 — <a href="https://yang-song.net/blog/2021/score/" target="_blank" rel="noopener">Score-Based Generative Models</a>**, *Yang Song*  
-- **2023 — <a href="https://scoste.fr/notes/" target="_blank" rel="noopener">Flow-Based Generative Models — Notes</a>**, *Simon Coste*
+<br>
+
+**2021 — <a href="https://yang-song.net/blog/2021/score/" target="_blank" rel="noopener">Score-Based Generative Models</a>**, *Yang Song*  
+**2023 — <a href="https://scoste.fr/notes/" target="_blank" rel="noopener">Flow-Based Generative Models — Notes</a>**, *Simon Coste*
 
 <style>
 /* --- Timeline styling that inherits theme colors --- */
