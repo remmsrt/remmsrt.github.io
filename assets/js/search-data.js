@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-genai",
+          title: "GenAI",
+          description: "A selection of nice papers, blog posts and others about generative AI for continuous spaces.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/genAI/";
+          },
         },{id: "nav-talks",
           title: "Talks",
           description: "Recent presentations and seminars.",
@@ -68,9 +75,4 @@ ninja.data = [{
           description: "And application to image generation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
-          description: "another with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
             },},];
