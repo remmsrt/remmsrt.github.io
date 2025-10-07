@@ -149,7 +149,7 @@ nav_order: 3
 .tl-year::after {
   content: "";
   position: absolute;
-  right: -0.3rem;      /* centré par rapport à la barre à 7.3rem */
+  right: -0.25rem;      /* centré par rapport à la barre à 7.3rem */
   top: .45rem;
   width: .6rem;
   height: .6rem;
