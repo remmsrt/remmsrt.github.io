@@ -65,8 +65,8 @@ ninja.data = [{
           section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib-within-the-quantitative-research-team-work-on-the-study-of-generative-models-of-financial-time-series",
           title: 'Start of my PhD at CERMICS and BNP Paribas CIB, within the quantitative...',
           description: "",
-          section: "News",},{id: "projects-score-based-diffusion-model",
-          title: 'Score-Based Diffusion Model',
+          section: "News",},{id: "projects-score-based-diffusion-models",
+          title: 'Score-Based Diffusion Models',
           description: "Theory from single noise perturbation to SDE formulation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
@@ -90,11 +90,6 @@ ninja.data = [{
           description: "Simple least-squares approach using Longstaff Schwartz algorithm",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-study-of-babynames",
-          title: 'Study of babynames',
-          description: "Data analytics and visualization using numpy and pandas",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
             },},{id: "projects-flow-based-generative-models",
           title: 'Flow-based generative models',
           description: "How to train them efficiently using flow matching and optimal transport",
