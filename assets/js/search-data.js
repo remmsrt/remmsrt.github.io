@@ -70,9 +70,34 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_project/";
-            },},{id: "projects-score-based-diffusion-model-with-sdes",
-          title: 'Score-Based Diffusion Model with SDEs',
-          description: "Application to image generation (MNIST)",
+            },},{id: "projects-score-based-diffusion-model",
+          title: 'Score-Based Diffusion Model',
+          description: "Theory from single noise perturbation to SDE formulation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-classification-using-svms",
+          title: 'Classification using SVMs',
+          description: "Application to dog/cat and handwritten character recognition",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-traveling-salesman-and-knapsack-problems-solver",
+          title: 'Traveling Salesman and Knapsack problems solver',
+          description: "Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal and Christofides.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-maze-generation",
+          title: 'Maze generation',
+          description: "Implemented in C++",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-american-options-pricing",
+          title: 'American Options Pricing',
+          description: "Simple least-squares approach using Longstaff Schwartz algorithm",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-study-of-babynames",
+          title: 'Study of babynames',
+          description: "Data analytics and visualization using numpy and pandas",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
             },},];
