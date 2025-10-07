@@ -6,6 +6,7 @@ img: assets/img/12.jpg
 importance: 2
 category: academic
 related_publications: true
+published: false
 ---
 
 Every project has a beautiful feature showcase page.

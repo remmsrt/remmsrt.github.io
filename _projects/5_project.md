@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Maze generation
-description: Implemented in C++
-img: assets/img/Maze.png
+description: Random maze generation and optimal pathfinding with the A* algorithm in C++
+img: assets/img/maze.png
 importance: 3
 category: academic
 ---

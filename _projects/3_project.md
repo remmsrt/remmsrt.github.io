@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Traveling Salesman and Knapsack problems solver
+title: TSP and Knapsack problems solver
 description: 
 img: assets/img/7.jpg
 redirect: https://unsplash.com

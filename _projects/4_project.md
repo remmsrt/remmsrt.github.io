@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Traveling Salesman and Knapsack problems solver
-description: Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal and Christofides.
+title: TSP and Knapsack problem solver
+description: Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal.
 img: assets/img/TSP.png
 importance: 2
 category: academic

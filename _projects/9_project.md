@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
-img: assets/img/6.jpg
-importance: 4
-category: academic
-published: false
+title: Flow-based generative models
+description: How to train them efficiently using flow matching and optimal transport
+img: assets/img/flow_matching.gif
+importance: 3
+category: personal
 ---
 
 Every project has a beautiful feature showcase page.
