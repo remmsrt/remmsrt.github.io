@@ -2,7 +2,7 @@
 layout: page
 title: Classification using SVMs
 description: Application to dog/cat and handwritten character recognition
-img: assets/img/SVM.png
+img: assets/img/SVMs.png
 importance: 1
 category: academic
 giscus_comments: true

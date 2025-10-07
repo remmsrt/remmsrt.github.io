@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Score-Based Diffusion Model
+title: Score-Based Diffusion Models
 img: assets/img/forward.gif
 description: Theory from single noise perturbation to SDE formulation
 importance: 1

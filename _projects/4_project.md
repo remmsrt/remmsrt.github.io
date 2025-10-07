@@ -2,7 +2,7 @@
 layout: page
 title: TSP and Knapsack problem solver
 description: Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal.
-img: assets/img/TSP.png
+img: assets/img/TSP_knapsack.png
 importance: 2
 category: academic
 ---
