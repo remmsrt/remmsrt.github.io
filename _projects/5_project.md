@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: Maze generation
+description: Implemented in C++
+img: assets/img/Maze.png
 importance: 3
-category: personal
-published: false
+category: academic
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Score-Based Diffusion Model with SDEs
+title: Score-Based Diffusion Model
 img: assets/img/forward.gif
-description: Application to image generation (MNIST)
+description: Theory from single noise perturbation to SDE formulation
 importance: 1
 category: personal
 related_publications: true
 ---
 
-The goal of this project is to implement, from scratch, a score-based generative model based on a stochastic differential equation (SDE), inspired by the following paper:
+The goal of this project is to derive, from scratch, a score-based generative model based on a stochastic differential equation (SDE), inspired by the following paper:
 
 [Song et al., “Score-Based Generative Modeling through Stochastic Differential Equations” (2021)](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F2011.13456.pdf)
 
@@ -192,51 +192,50 @@ The gradient term $\Delta t \nabla_{\mathbf{x}} \log p(\mathbf{x}_i)$ moves samp
 
 ---
 
-> <span style="font-size: 110%; font-weight: bold">Proof.</span>  
-> 
->
-> Let $p_t(\mathbf{x})$ be the density at time $t$. It evolves according to the **Fokker–Planck equation**:
-> 
-> $$
-> \boxed{\frac{\partial p_t(\mathbf{x})}{\partial t} = -\nabla_{\mathbf{x}} \cdot \left( p_t(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p_t(\mathbf{x}).}
-> $$
-> 
-> A **stationary solution** $\bar{p}(\mathbf{x})$ of the Fokker–Planck equation is a time-independent probability density that satisfies:
-> 
-> $$
-> \frac{\partial \bar{p}(\mathbf{x})}{\partial t} = 0.
-> $$
-> 
-> Substituting into the Fokker–Planck equation yields the condition:
-> 
-> $$
-> -\nabla_{\mathbf{x}} \cdot \left( \bar{p}(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 \bar{p}(\mathbf{x}) = 0.
-> $$
-> 
-> Let us assume that $p(\mathbf{x})$ is a smooth, strictly positive density with support on $\mathbb{R}^d$, and define:
-> 
-> $$
-> \bar{p}(\mathbf{x}) := p(\mathbf{x}).
-> $$
-> 
-> Then:
-> 
-> $$
-> \begin{align*}
-> -\nabla_{\mathbf{x}} \cdot \left( \bar{p}(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 \bar{p}(\mathbf{x})
-> &= -\nabla_{\mathbf{x}} \cdot \left( p(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
-> &= -\nabla_{\mathbf{x}} \cdot \left( \nabla_{\mathbf{x}} p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
-> &= -\nabla_{\mathbf{x}}^2 p(\mathbf{x}) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
-> &= 0
-> \end{align*}
-> $$
-> 
-> Therefore, the stationary solution of this PDE is exactly $p(\mathbf{x})$:
-> 
-> $$
-> \boxed{
-> \lim_{t \to \infty} p_t(\mathbf{x}) = p(\mathbf{x})}.
-> $$
+*Proof.*
+
+Let $p_t(\mathbf{x})$ be the density at time $t$. It evolves according to the **Fokker–Planck equation**:
+
+$$
+\boxed{\frac{\partial p_t(\mathbf{x})}{\partial t} = -\nabla_{\mathbf{x}} \cdot \left( p_t(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p_t(\mathbf{x}).}
+$$
+
+A **stationary solution** $\bar{p}(\mathbf{x})$ of the Fokker–Planck equation is a time-independent probability density that satisfies:
+
+$$
+\frac{\partial \bar{p}(\mathbf{x})}{\partial t} = 0.
+$$
+
+Substituting into the Fokker–Planck equation yields the condition:
+
+$$
+-\nabla_{\mathbf{x}} \cdot \left( \bar{p}(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 \bar{p}(\mathbf{x}) = 0.
+$$
+
+Let us assume that $p(\mathbf{x})$ is a smooth, strictly positive density with support on $\mathbb{R}^d$, and define:
+
+$$
+\bar{p}(\mathbf{x}) := p(\mathbf{x}).
+$$
+
+Then:
+
+$$
+\begin{align*}
+-\nabla_{\mathbf{x}} \cdot \left( \bar{p}(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 \bar{p}(\mathbf{x})
+&= -\nabla_{\mathbf{x}} \cdot \left( p(\mathbf{x}) \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
+&= -\nabla_{\mathbf{x}} \cdot \left( \nabla_{\mathbf{x}} p(\mathbf{x}) \right) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
+&= -\nabla_{\mathbf{x}}^2 p(\mathbf{x}) + \nabla_{\mathbf{x}}^2 p(\mathbf{x}) \\
+&= 0
+\end{align*}
+$$
+
+Therefore, the stationary solution of this PDE is exactly $p(\mathbf{x})$:
+
+$$
+\boxed{
+\lim_{t \to \infty} p_t(\mathbf{x}) = p(\mathbf{x})}.
+$$
 
 ---
 
@@ -283,7 +282,7 @@ $$
 \underbrace{\mathbb{E}_{x\sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 + \sum_{i=1}^d \frac{\partial s_{\theta, i}(\mathbf{x})}{\partial x_i} \right] + C}_{L_{\text{ISM}_{p}}(\theta)} = \underbrace{\mathbb{E}_{x\sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 + \mathrm{Tr}(\nabla_x s_{\theta}(\mathbf{x})) \right] + C}_{L_{\text{ISM}_{p}}(\theta)}}
 $$
 
-where $s_{\theta, i}(\mathbf{x})$ denotes the $i$-th component of $s_\theta(\mathbf{x})$, and $C$ is a constant that does not depend on $\theta$. This yields an **implicit score matching** objective $L_{\text{ISM}_{p}}$ **that no longer requires having an explicit score target** for $p(\mathbf{x})$, but is nevertheless equivalent to $L_{\text{ESM}_{p}}$.
+where $s_{\theta, i}(\mathbf{x})$ denotes the $i$-th component of $s_\theta(\mathbf{x})$, and $C$ is a constant that does not depend on $\theta$. This yields an **implicit score matching** objective $L_{\mathrm{ISM}_{p}}$ **that no longer requires having an explicit score target** for $p(\mathbf{x})$, but is nevertheless equivalent to $L_{\mathrm{ESM}_{p}}$.
 
 Hyvärinen formally shows that, provided $p(\mathbf{x})$ and $s_\theta(\mathbf{x})$ satisfy some weak regularity conditions, we have:
 
@@ -293,92 +292,92 @@ $$
 
 ---
 
-> <span style="font-size: 110%; font-weight: bold">Proof.</span>  
-> 
-> By developing the explicit score matching loss:
-> 
-> $$
-> \begin{aligned}
-> L_{\text{ESM}_{p}}(\theta) 
-> &= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 - 2 \, s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) + \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right] \\
-> &= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 \right] 
-> - 2 \, \mathbb{E}_{\mathbf{x} \sim p} \left[ s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right] 
-> + \mathbb{E}_{\mathbf{x} \sim p} \left[ \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right].
-> \end{aligned}
-> $$
-> 
-> Let us denote the cross term:
-> 
-> $$
-> \mathbb{E}_{\mathbf{x} \sim p} \left[ s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right] 
-> = \int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \, p(\mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> Using the identity $\nabla_{\mathbf{x}} \log p(\mathbf{x}) = \frac{\nabla_{\mathbf{x}} p(\mathbf{x})}{p(\mathbf{x})}$, this becomes:
-> 
-> $$
-> \int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} p(\mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> We now apply **integration by parts** (assuming $p(\mathbf{x}) s_\theta(\mathbf{x})$ decay fast enough as $\|\mathbf{x}\| \to \infty$):
-> 
-> $$
-> \int_{\mathbb{R}^d} s_{\theta,i}(\mathbf{x}) \frac{\partial p(\mathbf{x})}{\partial x_i} \, d\mathbf{x} 
-> = - \int_{\mathbb{R}^d} \frac{\partial s_{\theta,i}(\mathbf{x})}{\partial x_i} \, p(\mathbf{x}) \, d\mathbf{x},
-> $$
-> 
-> so summing over $i = 1, \dots, d$:
-> 
-> $$
-> \int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} p(\mathbf{x}) \, d\mathbf{x}
-> = - \int_{\mathbb{R}^d} \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \, p(\mathbf{x}) \, d\mathbf{x}
-> = - \mathbb{E}_{\mathbf{x} \sim p} \left[ \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right].
-> $$
-> 
-> Substituting back into $L_{\text{ESM}_p}$, we get:
-> 
-> $$
-> L_{\text{ESM}_p}(\theta)
-> = \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 \right] 
-> + 2 \, \mathbb{E}_{\mathbf{x} \sim p} \left[ \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right] 
-> + C,
-> $$
-> 
-> where 
-> 
-> $$
-> C = \mathbb{E}_{\mathbf{x} \sim p} \left[ \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right]
-> $$
-> 
-> is a constant **independent of $\theta$**.
-> 
-> Thus, we conclude:
-> 
-> $$
-> L_{\text{ISM}_p}(\theta)
-> := \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 + \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right],
-> $$
-> 
-> and:
-> 
-> $$
-> L_{\text{ESM}_p}(\theta) = L_{\text{ISM}_p}(\theta) + C.
-> $$
+*Proof.*
+
+By developing the explicit score matching loss:
+
+$$
+\begin{aligned}
+L_{\mathrm{ESM}_p}(\theta) 
+&= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 - 2 \, s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) + \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right] \\
+&= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 \right] 
+- 2 \, \mathbb{E}_{\mathbf{x} \sim p} \left[ s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right] 
++ \mathbb{E}_{\mathbf{x} \sim p} \left[ \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right].
+\end{aligned}
+$$
+
+Let us denote the cross term:
+
+$$
+\mathbb{E}_{\mathbf{x} \sim p} \left[ s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \right] 
+= \int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} \log p(\mathbf{x}) \, p(\mathbf{x}) \, d\mathbf{x}.
+$$
+
+Using the identity $\nabla_{\mathbf{x}} \log p(\mathbf{x}) = \frac{\nabla_{\mathbf{x}} p(\mathbf{x})}{p(\mathbf{x})}$, this becomes:
+
+$$
+\int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} p(\mathbf{x}) \, d\mathbf{x}.
+$$
+
+We now apply **integration by parts** (assuming $p(\mathbf{x}) s_\theta(\mathbf{x})$ decay fast enough as $\|\mathbf{x}\| \to \infty$):
+
+$$
+\int_{\mathbb{R}^d} s_{\theta,i}(\mathbf{x}) \frac{\partial p(\mathbf{x})}{\partial x_i} \, d\mathbf{x} 
+= - \int_{\mathbb{R}^d} \frac{\partial s_{\theta,i}(\mathbf{x})}{\partial x_i} \, p(\mathbf{x}) \, d\mathbf{x},
+$$
+
+so summing over $i = 1, \dots, d$:
+
+$$
+\int_{\mathbb{R}^d} s_\theta(\mathbf{x})^\top \nabla_{\mathbf{x}} p(\mathbf{x}) \, d\mathbf{x}
+= - \int_{\mathbb{R}^d} \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \, p(\mathbf{x}) \, d\mathbf{x}
+= - \mathbb{E}_{\mathbf{x} \sim p} \left[ \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right].
+$$
+
+Substituting back into $L_{\mathrm{ESM}_p}$, we get:
+
+$$
+L_{\mathrm{ESM}_p}(\theta)
+= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 \right] 
++ 2 \, \mathbb{E}_{\mathbf{x} \sim p} \left[ \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right] 
++ C,
+$$
+
+where 
+
+$$
+C = \mathbb{E}_{\mathbf{x} \sim p} \left[ \| \nabla_{\mathbf{x}} \log p(\mathbf{x}) \|^2 \right]
+$$
+
+is a constant **independent of $\theta$**.
+
+Thus, we conclude:
+
+$$
+L_{\mathrm{ISM}_p}(\theta)
+:= \mathbb{E}_{\mathbf{x} \sim p} \left[ \| s_\theta(\mathbf{x}) \|^2 + \mathrm{Tr}(\nabla_{\mathbf{x}} s_\theta(\mathbf{x})) \right],
+$$
+
+and:
+
+$$
+L_{\mathrm{ESM}_p}(\theta) = L_{\mathrm{ISM}_p}(\theta) + C.
+$$
 
 ---
 
-Since we only have samples $D_n$ from $p(\mathbf{x})$, Hyvärinen proposes to optimize the finite-sample version of $L_{\text{ISM}_{p}}$, which we will write $L_{\text{ISM}_{p_n}}$.
+Since we only have samples $D_n$ from $p(\mathbf{x})$, Hyvärinen proposes to optimize the finite-sample version of $L_{\mathrm{ISM}_{p}}$, which we will write $L_{\mathrm{ISM}_{p_n}}$.
 
 $$
-L_{\text{ISM}_{p_n}}(\theta)
+L_{\mathrm{ISM}_{p_n}}(\theta)
 = \mathbb{E}_{\mathbf{x} \sim p_n} \left[ \| s_\theta(\mathbf{x}) \|^2 + \sum_{i=1}^d \frac{\partial s_{\theta, i}(\mathbf{x})}{\partial x_i} \right]
 = \frac{1}{n} \sum_{t=1}^n \left( \| s_\theta(\mathbf{x}) \|^2 + \sum_{i=1}^d \frac{\partial s_{\theta, i}(\mathbf{x})}{\partial x_i} \right).
 $$
 
-$L_{\text{ISM}_{p_n}}$ is asymptotically equivalent to $L_{\text{ISM}_{p}}$ when $n \to \infty$, and hence asymptotically equivalent to objective $L_{\text{ESM}_p}$. This can be summarized as
+$L_{\mathrm{ISM}_{p_n}}$ is asymptotically equivalent to $L_{\mathrm{ISM}_{p}}$ when $n \to \infty$, and hence asymptotically equivalent to objective $L_{\mathrm{ESM}_p}$. This can be summarized as
 
 $$
-L_{\text{ESM}_{p}} \sim L_{\text{ISM}_{p}} \sim \lim_{n \to \infty} L_{\text{ISM}_{p_n}}.
+L_{\mathrm{ESM}_{p}} \sim L_{\mathrm{ISM}_{p}} \sim \lim_{n \to \infty} L_{\mathrm{ISM}_{p_n}}.
 $$
 
 **Remark**: Unlike the explicit score matching loss, which attains its global minimum at zero when $s_\theta = \nabla_{\mathbf{x}} \log p(\mathbf{x})$, the implicit loss does not in general reach a minimum of zero. However, it is now implementable from samples alone, without requiring access to the true score.
@@ -430,70 +429,69 @@ over the joint density $q_\sigma(\tilde{\mathbf{x}}, \mathbf{x}) = q_\sigma(\til
 
 ---
 
-> <span style="font-size: 110%; font-weight: bold">Proof.</span>  
-> 
-> We begin with the explicit score matching loss over the marginal $q_\sigma(\tilde{\mathbf{x}})$:
-> 
-> $$
-> L_{\text{ESM}_{q_\sigma}}(\theta)
-> = \mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) \right\|^2 \right].
-> $$
-> 
-> Our goal is to re-express the true score $\nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}})$ using the known conditional density $q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})$.
-> 
-> First, recall the marginal:
-> 
-> $$
-> q_\sigma(\tilde{\mathbf{x}}) = \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> Taking the gradient of the log-marginal:
-> 
-> $$
-> \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) 
-> = \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}})
-> = \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \nabla_{\tilde{\mathbf{x}}} \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> By TCD, the gradient commutes with the integral:
-> 
-> $$
-> \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) 
-> = \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \int_{\mathbb{R}^d} p(\mathbf{x}) \, \nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> Multiply and divide inside the integral by $q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})$:
-> 
-> $$
-> = \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \cdot \frac{\nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})} \, d\mathbf{x}
-> = \int_{\mathbb{R}^d} \frac{p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}})} \, \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
-> $$
-> 
-> The term inside the integral is exactly the posterior $p(\mathbf{x} \mid \tilde{\mathbf{x}})$:
-> 
-> $$
-> p(\mathbf{x} \mid \tilde{\mathbf{x}}) = \frac{p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}})},
-> $$
-> 
-> so we get:
-> 
-> $$
-> \boxed{
-> \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) = \int_{\mathbb{R}^d} p(\mathbf{x} \mid \tilde{\mathbf{x}}) \, \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}
-> = \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right].
-> }
-> $$
-> 
-> Substituting this into the explicit score matching objective:
-> 
-> $$
-> \begin{aligned}
-> L_{\text{ESM}_{q_\sigma}}(\theta)
-> &= \mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right] \right\|^2 \right] \\
-> &=\mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right\|^2 \right] \right] \\
-> &= \mathbb{E}_{(\tilde{\mathbf{x}}, \mathbf{x}) \sim q_\sigma(\tilde{\mathbf{x}}, \mathbf{x})} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right\|^2 \right],
-> \end{aligned}
-> $$
+*Proof.*
+
+We begin with the explicit score matching loss over the marginal $q_\sigma(\tilde{\mathbf{x}})$:
+
+$$
+L_{\mathrm{ESM}_{q_\sigma}}(\theta)
+= \mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) \right\|^2 \right].
+$$
+
+Our goal is to re-express the true score $\nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}})$ using the known conditional density $q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})$.
+
+First, recall the marginal:
+
+$$
+q_\sigma(\tilde{\mathbf{x}}) = \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
+$$
+
+Taking the gradient of the log-marginal:
+
+$$
+\nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) 
+= \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}})
+= \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \nabla_{\tilde{\mathbf{x}}} \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
+$$
+
+By TCD, the gradient commutes with the integral:
+
+$$
+\nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) 
+= \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \int_{\mathbb{R}^d} p(\mathbf{x}) \, \nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
+$$
+
+Multiply and divide inside the integral by $q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})$:
+
+$$
+= \frac{1}{q_\sigma(\tilde{\mathbf{x}})} \int_{\mathbb{R}^d} p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \cdot \frac{\nabla_{\tilde{\mathbf{x}}} q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})} \, d\mathbf{x}
+= \int_{\mathbb{R}^d} \frac{p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}})} \, \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}.
+$$
+
+The term inside the integral is exactly the posterior $p(\mathbf{x} \mid \tilde{\mathbf{x}})$:
+
+$$
+p(\mathbf{x} \mid \tilde{\mathbf{x}}) = \frac{p(\mathbf{x}) \, q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x})}{q_\sigma(\tilde{\mathbf{x}})},
+$$
+
+so we get:
+
+$$
+\boxed{
+\nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}}) = \int_{\mathbb{R}^d} p(\mathbf{x} \mid \tilde{\mathbf{x}}) \, \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \, d\mathbf{x}
+= \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right].
+}
+$$
+
+Substituting this into the explicit score matching objective:
+
+$$
+\begin{aligned}
+L_{\mathrm{ESM}_{q_\sigma}}(\theta)
+&= \mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right] \right\|^2 \right] \\
+&=\mathbb{E}_{\tilde{\mathbf{x}} \sim q_\sigma} \left[ \mathbb{E}_{\mathbf{x} \sim p(\mathbf{x} \mid \tilde{\mathbf{x}})} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right\|^2 \right] \right] \\
+&= \mathbb{E}_{(\tilde{\mathbf{x}}, \mathbf{x}) \sim q_\sigma(\tilde{\mathbf{x}}, \mathbf{x})} \left[ \left\| s_\theta(\tilde{\mathbf{x}}) - \nabla_{\tilde{\mathbf{x}}} \log q_\sigma(\tilde{\mathbf{x}} \mid \mathbf{x}) \right\|^2 \right].
+$$
 
 ---
 
@@ -532,7 +530,7 @@ $$
 
 Intuitively, the gradient corresponds to the direction of moving from $\tilde{\mathbf{x}}$ back to the original $\mathbf{x}$ (i.e., denoising it), and we want our score-based model $s_\theta (\tilde{\mathbf{x}})$ to match that as best as it can.
 
-The following figure visualizes that for the $1D$ case. We can see that the direction of the denoising score $\nabla{\tilde{\mathbf{x}}} \log q_\sigma (\tilde{\mathbf{x}} | \mathbf{x})$ almost perfectly matches the direction of the ground truth score $\nabla{\mathbf{x}} \log p (\mathbf{x})$. Thus, we found an appropriate target for our score-matching objective, so that we can learn the score function.
+The following figure visualizes that for the $1D$ case. We can see that the direction of the denoising score $\nabla_{\tilde{\mathbf{x}}} \log q_\sigma (\tilde{\mathbf{x}} \mid \mathbf{x})$ almost perfectly matches the direction of the ground truth score $\nabla{\mathbf{x}} \log p (\mathbf{x})$. Thus, we found an appropriate target for our score-matching objective, so that we can learn the score function.
 
 ---
 
@@ -593,7 +591,13 @@ $$
 \boxed{L_{\mathrm{DSM}}(\theta, \sigma_1, \dots, \sigma_L) = \frac{1}{L} \sum_{i=1}^L \lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta) = \frac{1}{L} \sum_{i=1}^L \lambda(i) \, \mathbb{E}_{(\tilde{\mathbf{x}}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}}, \mathbf{x})} \left[ \left\| s_\theta(\mathbf{x}, i) - \frac{\mathbf{x} - \tilde{\mathbf{x}_i}}{\sigma_{i}^2} \right\|^2 \right]}
 $$
 
-where $\lambda(i) \in \mathbb{R}_{+}$ is a positive weighting function. Assuming $s_\theta(\mathbf{x})$ has enough capacity, $s_{\theta^*}(\mathbf{x})$ minimizes the loss function if and only if $s_{\theta^*}(\mathbf{x}, i) = \nabla_{\mathbf{x}} \log q_{\sigma_i}(\mathbf{x})$ almost surely for all $i \in \{1, 2, \cdots, L\}$, because this is a combination of $L$ denoising score matching objectives.
+where $\lambda(i) \in \mathbb{R}_{+}$ is a positive weighting function. Assuming $s_\theta(\mathbf{x})$ has enough capacity, the optimal function $s_{\theta^*}(\mathbf{x})$ minimizes the loss if and only if  
+
+$$
+s_{\theta^*}(\mathbf{x}, i) = \nabla_{\mathbf{x}} \log q_{\sigma_i}(\mathbf{x})
+$$  
+
+almost surely for all $i \in \{1, 2, \ldots, L\}$, because this is a combination of $L$ denoising score matching objectives.
 
 After training our noise-conditional score-based model $s_\theta(\mathbf{x}, i)$, we can produce samples from it by running Langevin dynamics for $i = L, L - 1, \cdots, 1$ in sequence. Defined by Algorithm 1 in [Song & Ermon (2020)](https://arxiv.org/pdf/1907.05600), this method is called **annealed Langevin dynamics** since the noise scale decreases gradually over time.
 
@@ -601,25 +605,69 @@ After training our noise-conditional score-based model $s_\theta(\mathbf{x}, i)$
 
 ### Choice of noise scales and weighting function
 
-As explained by [Song & Ermon (2020)](https://arxiv.org/pdf/1907.05600), there can be many possible choices of $\lambda(\cdot)$. Ideally, we hope that the values of $\lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta)$ for all $({\sigma}_{i})_{i=1\dots L}$ are roughly of the **same order of magnitude**. We observe that when the score networks are trained to optimality, we have:
-
-$$ \mathbb{E}_{(\tilde{\mathbf{x}_i}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| s_\theta(\mathbf{x}, i) - \frac{\mathbf{x} - \tilde{\mathbf{x}_i}}{\sigma_{i}^2} \right\|^2 \right] = 0 \quad \forall i \in \{1, \dots, L\}$$
-
-Recall that $\boldsymbol{\mathbf{z}}_i = \tilde{\mathbf{x}_i} - \mathbf{x} \sim \mathcal{N}(0, \sigma_i^2 \cdot \mathbf{I})$, we have:
+As explained by [Song & Ermon (2020)](https://arxiv.org/pdf/1907.05600), there can be many possible choices of $\lambda(\cdot)$.  
+Ideally, we hope that the values of $\lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta)$ for all $\sigma_i$ (with $i = 1, \dots, L$) are roughly of the **same order of magnitude**.  
+We observe that when the score networks are trained to optimality, we have:
 
 $$
-\mathbb{E}_{(\tilde{\mathbf{x}_i}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| s_\theta(\mathbf{x}, i) \right\|^2 \right] \approx \frac{1}{\sigma_i^2} \mathbb{E}_{(\tilde{\mathbf{x}_i}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| \tilde{\mathbf{x}_i} - \mathbf{x} \right\|^2 \right] \approx \frac{1}{\sigma_i}  \cdot \sqrt{D}
+\mathbb{E}_{(\tilde{\mathbf{x}}_i, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}}_i, \mathbf{x})}
+\left[
+\left\| s_\theta(\mathbf{x}, i) - \frac{\mathbf{x} - \tilde{\mathbf{x}}_i}{\sigma_i^2} \right\|^2
+\right] = 0
+\quad \forall i \in \{1, \dots, L\}.
 $$
 
-Thus, $\mathbb{E}_{(\tilde{\mathbf{x}_i}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| s_\theta(\mathbf{x}, i) \right\|^2 \right] \propto \frac{1}{\sigma_i}$
-
-This inspires to choose $\boxed{\lambda(i) = \sigma_i^2}$. Because under this choice, we have
+Recall that $\mathbf{z}_i = \tilde{\mathbf{x}}_i - \mathbf{x} \sim \mathcal{N}(0, \sigma_i^2 \mathbf{I})$, we have:
 
 $$
-\lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta) = \mathbb{E}_{q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| \sigma_i s_\theta(\mathbf{x}, i) - \frac{\mathbf{x} - \tilde{\mathbf{x}_i}}{\sigma_i} \right\|^2 \right].
+\mathbb{E}_{(\tilde{\mathbf{x}}_i, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}}_i, \mathbf{x})}
+\left[ \| s_\theta(\mathbf{x}, i) \|^2 \right]
+\approx
+\frac{1}{\sigma_i^2}
+\mathbb{E}_{(\tilde{\mathbf{x}}_i, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}}_i, \mathbf{x})}
+\left[ \| \tilde{\mathbf{x}}_i - \mathbf{x} \|^2 \right]
+\approx
+\frac{1}{\sigma_i} \sqrt{D}.
 $$
 
-And since $\frac{\mathbf{x} - \tilde{\mathbf{x}_i}}{\sigma_i} \sim \mathcal{N}(0, I)$ and $\sigma_i \cdot \mathbb{E}_{(\tilde{\mathbf{x}_i}, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}_i}, \mathbf{x})} \left[ \left\| s_\theta(\mathbf{x}, i) \right\|^2 \right] \propto 1$, we can easily conclude that the order of magnitude of $\lambda(i) \, J_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta)$ does not depend on $\sigma_i$. So, in the objective loss, we obtain a balanced weighting between the different noise scales.
+Thus,
+
+$$
+\mathbb{E}_{(\tilde{\mathbf{x}}_i, \mathbf{x}) \sim q_{\sigma_i}(\tilde{\mathbf{x}}_i, \mathbf{x})}
+\left[ \| s_\theta(\mathbf{x}, i) \|^2 \right]
+\propto
+\frac{1}{\sigma_i}.
+$$
+
+This inspires the choice
+
+$$
+\boxed{\lambda(i) = \sigma_i^2}.
+$$
+
+Because under this choice, we have:
+
+$$
+\lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta)
+=
+\mathbb{E}_{q_{\sigma_i}(\tilde{\mathbf{x}}_i, \mathbf{x})}
+\left[
+\left\| \sigma_i s_\theta(\mathbf{x}, i)
+- \frac{\mathbf{x} - \tilde{\mathbf{x}}_i}{\sigma_i} \right\|^2
+\right].
+$$
+
+And since
+
+$$
+\frac{\mathbf{x} - \tilde{\mathbf{x}}_i}{\sigma_i} \sim \mathcal{N}(0, \mathbf{I})
+\quad \text{and} \quad
+\sigma_i \, \mathbb{E}_{(\tilde{\mathbf{x}}_i, \mathbf{x}) \sim q_{\sigma_i}}
+\left[ \| s_\theta(\mathbf{x}, i) \|^2 \right] \propto 1,
+$$
+
+we can easily conclude that the order of magnitude of $\lambda(i) \, L_{\mathrm{DSM}_{q_{\sigma_i}}}(\theta)$ does not depend on $\sigma_i$.  
+Therefore, in the objective loss, we obtain a balanced weighting between the different noise scales.
 
 ---
 
@@ -631,17 +679,17 @@ The key idea is that Langevin dynamics simulates sampling from $q_{\sigma_i}$ us
 
 ---
 
-> **Algorithm: Annealed Langevin Dynamics**
->
-> **Input**: Noise levels $\sigma_L > \cdots > \sigma_1$, step sizes $(\Delta t_i)$, number of steps $(T_i)$, trained score network $s_\theta$
->
-> **1.** Initialize $\mathbf{x}_0 \sim \mathcal{N}(0, I)$  
-> **2.** For $i = L, \dots, 1$ do:  
-> &nbsp;&nbsp;&nbsp;&nbsp;**a.** For $t = 1$ to $T_i$ do:  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sample $\mathbf{z}_t \sim \mathcal{N}(0, I)$  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update:  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$\mathbf{x} \leftarrow \mathbf{x} + \frac{\Delta t_i}{2} s_\theta(\mathbf{x}, i) + \sqrt{\Delta t_i} \mathbf{z}_t$  
-> **3.** Return final sample $\mathbf{x}$
+**Algorithm: Annealed Langevin Dynamics**
+
+**Input:** Noise levels $\sigma_L > \cdots > \sigma_1$, step sizes $(\Delta t_i)$, number of steps $(T_i)$, trained score network $s_\theta$
+
+1. Initialize $\mathbf{x}_0 \sim \mathcal{N}(0, \mathbf{I})$  
+2. For $i = L, \dots, 1$ do:  
+   a. For $t = 1$ to $T_i$ do:  
+   &nbsp;&nbsp;&nbsp;&nbsp;Sample $\mathbf{z}_t \sim \mathcal{N}(0, \mathbf{I})$  
+   &nbsp;&nbsp;&nbsp;&nbsp;Update:  
+   &nbsp;&nbsp;&nbsp;&nbsp;$\mathbf{x} \leftarrow \mathbf{x} + \frac{\Delta t_i}{2} s_\theta(\mathbf{x}, i) + \sqrt{\Delta t_i} \mathbf{z}_t$  
+3. Return final sample $\mathbf{x}$
 
 ---
 
@@ -800,3 +848,31 @@ $$
 $$
 
 This transforms the 1D input $t$ into a $D$-dimensional representation capturing multiple frequency bands. The sinusoidal structure ensures that nearby values of $t$ can be linearly combined to reconstruct complex functions, while the random frequencies help to decorrelate different components. In practice, this embedding behaves similarly to a positional encoding (as in [Transformers (2017)](https://arxiv.org/abs/1706.03762)), but generalized to continuous domains using random projections.
+
+--- 
+
+### References
+
+- **[Reverse-time diffusion equation models](https://core.ac.uk/download/pdf/82826666.pdf)** — Anderson, B. D. O. (1982).
+
+- **[Density Estimation Using Real NVP](https://arxiv.org/abs/1605.08803)** — Dinh, L., Sohl-Dickstein, J., & Bengio, S. (2016).
+
+- **[Generative Adversarial Nets](https://arxiv.org/abs/1406.2661)** — Goodfellow, I. et al. (2014).
+
+- **[Estimation of Non-Normalized Statistical Models by Score Matching](https://jmlr.org/papers/volume6/hyvarinen05a/hyvarinen05a.pdf)** — Hyvärinen, A. (2005).
+
+- **[Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)** — Kingma, D. P., & Welling, M. (2013).
+
+- **[On the Spectral Bias of Neural Networks](https://arxiv.org/abs/1806.08734)** — Rahaman, N. et al. (2019).
+
+- **[U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)** — Ronneberger, O., Fischer, P., & Brox, T. (2015).
+
+- **[Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600)** — Song, Y., & Ermon, S. (2020).
+
+- **[Score-Based Generative Modeling through Stochastic Differential Equations](https://arxiv.org/abs/2011.13456)** — Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2021).
+
+- **[Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/abs/2006.10739)** — Tancik, M. et al. (2020).
+
+- **[Attention Is All You Need](https://arxiv.org/abs/1706.03762)** — Vaswani, A. et al. (2017).
+
+- **[A Connection Between Score Matching and Denoising Autoencoders](https://www.iro.umontreal.ca/~vincentp/Publications/smdae_techreport.pdf)** — Vincent, P. (2010).

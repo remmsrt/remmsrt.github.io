@@ -1,12 +1,11 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
+title: Classification using SVMs
+description: Application to dog/cat and handwritten character recognition
+img: assets/img/SVM.png
+importance: 1
 category: academic
 giscus_comments: true
-published: false
 ---
 
 Every project has a beautiful feature showcase page.

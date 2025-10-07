@@ -1,12 +1,11 @@
 ---
 layout: page
-title: project 7
-description: with background image
-img: assets/img/4.jpg
-importance: 1
+title: Study of babynames
+description: Data analytics and visualization using numpy and pandas
+img: assets/img/babynames.png
+importance: 4
 category: academic
 related_publications: true
-published: false
 ---
 
 Every project has a beautiful feature showcase page.

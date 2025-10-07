@@ -1,11 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
+title: American Options Pricing
+description: Simple least-squares approach using Longstaff Schwartz algorithm
+img: assets/img/montecarlo.png
+importance: 2
 category: personal
-published: false
 ---
 
 Every project has a beautiful feature showcase page.

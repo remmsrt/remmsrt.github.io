@@ -37,7 +37,7 @@ nav_order: 3
   <div class="tl-row">
     <div class="tl-year">2019</div>
     <div class="tl-content">
-      <div class="tl-item"><strong><a href="https://arxiv.org/abs/1907.05600" target="_blank" rel="noopener">Generative Modeling by Estimating Gradients of the Data Distribution</a></strong> — introduction of score-based diffusion models.</div>
+      <div class="tl-item"><strong><a href="https://arxiv.org/abs/1907.05600" target="_blank" rel="noopener">Generative Modeling by Estimating Gradients of the Data Distribution</a></strong></div>
     </div>
   </div>
 
@@ -111,54 +111,62 @@ nav_order: 3
 **2023 — <a href="https://scoste.fr/notes/" target="_blank" rel="noopener">Flow-Based Generative Models — Notes</a>**, *Simon Coste*
 
 <style>
-/* --- Timeline styling that inherits theme colors --- */
+/* --- Timeline styling, solid line & dots --- */
 .timeline {
   position: relative;
   display: grid;
   gap: 1.25rem;
   margin: 1.5rem 0 2.5rem;
 }
+
+/* Barre verticale — pleine */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 7.5rem;
+  left: 7.3rem;        /* aligné avec les points */
   top: .5rem;
   bottom: .5rem;
-  width: 2px;
-  background: currentColor;   /* use theme color */
-  opacity: .25;               /* subtle line */
+  width: 2px;          /* tu peux mettre 3px si tu veux plus épais */
+  background: currentColor;  /* garde la couleur du thème */
+  opacity: 1;          /* plein, sans transparence */
 }
+
+/* Ligne (année + contenu) */
 .tl-row {
   display: grid;
   grid-template-columns: 7.5rem 1fr;
   align-items: start;
 }
+
+/* Année */
 .tl-year {
   position: relative;
   font-weight: 700;
   letter-spacing: .02em;
 }
+
+/* Points — pleins, centrés sur la barre */
 .tl-year::after {
   content: "";
   position: absolute;
-  right: -.5rem;
+  right: -0.6rem;      /* centré par rapport à la barre à 7.3rem */
   top: .45rem;
   width: .6rem;
   height: .6rem;
-  background: currentColor;   /* use theme color */
+  background: currentColor;  /* même couleur que le thème */
   border-radius: 50%;
-  opacity: .6;
+  opacity: 1;          /* plein */
+  box-shadow: none;    /* pas d’auréole/transparence */
 }
+
+/* Contenu */
 .tl-content { padding-left: 1.25rem; }
 .tl-item { margin: .25rem 0; line-height: 1.4; }
-.tl-item a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 2px;
-}
+
+/* Responsive */
 @media (max-width: 640px) {
-  .timeline::before { left: 5.5rem; }
+  .timeline::before { left: 5.3rem; }
   .tl-row { grid-template-columns: 5.5rem 1fr; }
-  .tl-year::after { right: -.45rem; }
+  .tl-year::after { right: -0.45rem; }
 }
 </style>

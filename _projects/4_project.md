@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Blank Project
-description: another with background image
-img: assets/img/12.jpg
-importance: 3
-category: personal
-published: false
+title: Traveling Salesman and Knapsack problems solver
+description: Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal and Christofides.
+img: assets/img/TSP.png
+importance: 2
+category: academic
 ---
 
 Every project has a beautiful feature showcase page.
