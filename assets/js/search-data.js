@@ -65,12 +65,7 @@ ninja.data = [{
           section: "News",},{id: "news-start-of-my-phd-at-cermics-and-bnp-paribas-cib-within-the-quantitative-research-team-work-on-the-study-of-generative-models-of-financial-time-series",
           title: 'Start of my PhD at CERMICS and BNP Paribas CIB, within the quantitative...',
           description: "",
-          section: "News",},{id: "projects-blank-project",
-          title: 'Blank Project',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
-            },},{id: "projects-score-based-diffusion-model",
+          section: "News",},{id: "projects-score-based-diffusion-model",
           title: 'Score-Based Diffusion Model',
           description: "Theory from single noise perturbation to SDE formulation",
           section: "Projects",handler: () => {
@@ -80,14 +75,14 @@ ninja.data = [{
           description: "Application to dog/cat and handwritten character recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-traveling-salesman-and-knapsack-problems-solver",
-          title: 'Traveling Salesman and Knapsack problems solver',
-          description: "Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal and Christofides.",
+            },},{id: "projects-tsp-and-knapsack-problem-solver",
+          title: 'TSP and Knapsack problem solver',
+          description: "Greedy algorithms, dynamic programming, integer linear optimization, local search, Kruskal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-maze-generation",
           title: 'Maze generation',
-          description: "Implemented in C++",
+          description: "Random maze generation and optimal pathfinding with the A* algorithm in C++",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-american-options-pricing",
@@ -100,4 +95,9 @@ ninja.data = [{
           description: "Data analytics and visualization using numpy and pandas",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
+            },},{id: "projects-flow-based-generative-models",
+          title: 'Flow-based generative models',
+          description: "How to train them efficiently using flow matching and optimal transport",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
             },},];
