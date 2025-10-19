@@ -3,7 +3,7 @@ layout: page
 title: GenAI
 permalink: /genAI/
 description: A non-exhaustive list of key papers and resources on GenAI for continuous spaces.
-nav: true
+nav: false
 nav_order: 3
 ---
 
