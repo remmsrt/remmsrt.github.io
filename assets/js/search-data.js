@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-genai",
-          title: "GenAI",
-          description: "A non-exhaustive list of key papers and resources on GenAI for continuous spaces.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/genAI/";
-          },
         },{id: "nav-talks",
           title: "Talks",
           description: "Recent presentations and seminars.",
