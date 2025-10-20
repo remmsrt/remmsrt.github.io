@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-talks",
-          title: "Talks",
-          description: "Recent presentations and seminars.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/talks/";
-          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
@@ -60,7 +53,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-score-based-diffusion-models",
           title: 'Score-Based Diffusion Models',
-          description: "Theory from single noise perturbation to SDE formulation",
+          description: "Theory from single noise perturbation to SDE formulation and application to image generation",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-classification-using-svms",
