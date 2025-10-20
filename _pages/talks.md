@@ -3,17 +3,14 @@ layout: page
 permalink: /talks/
 title: Talks
 description: Recent presentations and seminars.
-nav: true
+nav: false
 nav_order: 4
 ---
-
-## 2025
 
 <div style="clear: both;"></div>
 <hr class="about-sep">
 
 ### [Flow-based generative models](https://groups.oist.jp/mlds/event/seminar-mlds-unit-seminar-2025-4-mr-r%C3%A9mi-surat-ensae-paris-ms-klea-ziu-mbzuai)  
-*How to train them efficiently using flow matching and optimal transport*
 
 <div style="margin-top: -0.3em; font-size: 0.9rem; color: var(--global-text-color-light); line-height: 1.3;">
 <span style="color: var(--global-text-color);">OIST, Okinawa, Japan — September 16, 2025</span>

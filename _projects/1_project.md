@@ -2,7 +2,7 @@
 layout: page
 title: Score-Based Diffusion Models
 img: assets/img/forward.gif
-description: Theory from single noise perturbation to SDE formulation
+description: Theory from single noise perturbation to SDE formulation and application to image generation
 importance: 1
 category: personal
 related_publications: true

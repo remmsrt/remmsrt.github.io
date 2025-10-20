@@ -2,7 +2,7 @@
 layout: page
 title: Flow-based generative models
 description: How to train them efficiently using flow matching and optimal transport
-img: assets/img/flow_matching.gif
+img: assets/img/FM_Coupling.gif
 importance: 3
 category: personal
 ---
